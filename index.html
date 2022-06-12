@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Selectors with CSS</title>
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>John Koufalas</h1>
+    <!-- This div is used to style the links section -->
+    <nav>
+      <ul>
+        <li>
+          <a class="nav-menu" href="#about-me">About Me</a>
+        </li>
+        <li>
+          <a class="nav-menu" href="#work">Work</a>
+        </li>
+        <li>
+          <a class="nav-menu" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+</header>
+<section class="block-background">
+  <div class="sub-title">
+    Professional Portfolio
+  </div>
+</section>
+  <main>
+    <section class="body-content">
+      <aside class="body-left" id="about-me"> 
+        <h1 class="body-left-content">About Me</h1>
+      </aside>
+       <div class="body-right-content">
+          <p>
+            Content
+          </p>
+          <p>
+            More Content
+          </p>
+       </div>
+
+    </section>
+    <section class="body-content">
+      <aside class="body-left" id="work"> 
+        <h1 class="body-left-content">Work</h1>
+      </aside>
+       <div class="body-right-content">
+          <div class="work-flexbox">
+            <figure class="work-flex-item-major">
+              <img src="./assets/Images/CSSGit.jpg">
+              <div>
+                <span class="image-header">Horieson</span>
+                <br>
+                <span class="image-skills">CSS / Git</span>
+              </div>
+            </figure>
+            <div class="work-flex-item-minor"> 
+              <img src="./assets/Images/CSSGit.jpg">
+              <div>
+                <span class="image-header">Horieson 1</span>
+                <br>
+                <span class="image-skills">CSS / Git 1</span>
+              </div>
+            </div>
+            <div class="work-flex-item-minor">
+              <img src="./assets/Images/CSSGit.jpg">
+              <div>
+                <span class="image-header">Horieson 2</span>
+                <br>
+                <span class="image-skills">CSS / Git 2</span>
+              </div>
+            </div>
+
+          </div>
+
+       </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <span>Thanks for visiting!</span>
+  </footer>
+</body>
+
+</html>
