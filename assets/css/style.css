@@ -117,8 +117,9 @@
  }
 
  .nav-menu:hover {
-    text-shadow: 2px 2px 10px cadetblue;
-    font-size: 31px;
+    text-shadow: 4px 4px 14px cadetblue;
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
 
  }
  .nav-menu:active {
@@ -128,7 +129,6 @@
  }
 
  .work-flexbox {
-    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -136,17 +136,42 @@
  }
 
  .work-flex-item-major{
-    flex: 1 1 100%;
+    flex: 0 0 100%;
     padding: 0px 5px 5px 5px;
+    /* Negative margin to adjust for relative position change of headings div
+    Even though the heading position is adjusted to be inside the picture the space 
+    that it originated is left as empty space, this reduction in margin adjusts for this */
+    margin-bottom: -50px;
  }
 
- .work-flex-item-major img {
-    width: 100%;
-    border: cadetblue solid;
+ .work-flex-item-major .major-img-container {
+   border: cadetblue solid;
     border-width: 9px;
+    /* removes gap at bottom of image because of container div line height */
+    line-height: 0;
  }
 
- .work-flex-item-major div {
+ .work-flex-item-major .major-img-container img {
+    width: 100%;
+    height: auto;
+    filter: grayscale(70%);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+ }
+
+ .work-flex-item-major div img:hover {
+    filter: grayscale(0%);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+ }
+
+ .work-flex-item-major .major-headings {
     position: relative;
     bottom: 100px;
     left: 9px;
@@ -154,50 +179,73 @@
     border: cadetblue solid;
     border-width: 10px;
     padding: 0px 10px 0px 10px;
-    width: min-content;
+    width: fit-content;
     line-height: 80%;
  }
 
- .work-flex-item-major div .image-header {
+ .work-flex-item-major .major-headings .image-header {
     font-size: 22px;
     font-weight: bold;
  }
 
- .work-flex-item-major div .image-skills {
+ .work-flex-item-major .major-headings .image-skills {
     font-size: 13px;
  }
 
  .work-flex-item-minor{
-    box-sizing: border-box;
-    flex: 1 1 50%;
+    flex: 0 0 50%;
     padding: 0px 5px 5px 5px;
+    /* Negative margin to adjust for relative position change of headings div
+   Even though the heading position is adjusted to be inside the picture the space 
+   that it originated is left as empty space, this reduction in margin adjusts for this */
+    margin-bottom: -50px;
  }
 
- .work-flex-item-minor img {
-    display: inline-block;
-    width: 100%;
-    border: cadetblue solid;
-    border-width: 9px;
- }
+ .work-flex-item-minor .minor-img-container {
+   border: cadetblue solid;
+   border-width: 9px;
+   /* removes gap at bottom of image because of container div line height */
+   line-height: 0;
+}
 
- .work-flex-item-minor div {
-    position: relative;
-    bottom: 80px;
-    left: 09px;
-    background-color: cadetblue;
-    border: cadetblue solid;
-    border-width: 10px;
-    padding: 0px 7px 0px 7px;
-    width:fit-content;
-    line-height: 60%;
- }
+.work-flex-item-minor div img {
+   width: 100%;
+   height: auto;
+   filter: grayscale(70%);
+   -webkit-transition: all 0.3s ease-out;
+   -moz-transition: all 0.3s ease-out;
+   -o-transition: all 0.3s ease-out;
+   -ms-transition: all 0.3s ease-out;
+   transition: all 0.3s ease-out;
+}
 
- .work-flex-item-minor div .image-header {
+.work-flex-item-minor div img:hover {
+   filter: grayscale(0%);
+   -webkit-transition: all 0.3s;
+   -moz-transition: all 0.3s;
+   -o-transition: all 0.3s;
+   -ms-transition: all 0.3s;
+   transition: all 0.3s;
+}
+
+.work-flex-item-minor .minor-headings {
+   position: relative;
+   bottom: 100px;
+   left: 9px;
+   background-color: cadetblue;
+   border: cadetblue solid;
+   border-width: 10px;
+   padding: 0px 10px 0px 10px;
+   width: fit-content;
+   line-height: 80%;
+}
+
+ .work-flex-item-minor .minor-headings .image-header {
     font-size: 17px;
     font-weight: bold;
  }
 
- .work-flex-item-minor div .image-skills {
+ .work-flex-item-minor .minor-headings .image-skills {
     font-size: 11px;
  }
 
@@ -232,4 +280,23 @@
     header nav, header h1 {
         width: 100%;
     }
+
+    .work-flex-item-minor{
+       flex: 0 0 100%;
+    }
+
+    .work-flex-item-minor .minor-headings .image-header, .work-flex-item-major .major-headings .image-header {
+      font-size: 10px;
+      font-weight: bold;
+   }
+  
+   .work-flex-item-minor .minor-headings .image-skills, .work-flex-item-major .major-headings .image-skills {
+      font-size: 07px;
+   }
+
+   .work-flex-item-minor .minor-headings, .work-flex-item-major .major-headings {
+      bottom: 80px;
+      padding: 0px 5px 0px 5px;
+      line-height: 50%;
+   }
  }
