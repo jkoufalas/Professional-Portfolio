@@ -1,3 +1,9 @@
+:root {
+   /* declare a variable with `--` syntax */
+   --dark: rgb(0, 17, 55);
+   --light: rgb(41, 175, 216);
+ }
+
 /* Universal Selector Definition */
 * {
     box-sizing: border-box;
@@ -5,7 +11,8 @@
     margin: 0;
  }
  
- /* Sets the background colour for the entire body section */
+ /* Sets the background colour for the entire body section 
+ flexbox is used as a columns to order the different content areas */
  body {
     font-family: Arial;
     margin: 0;
@@ -23,39 +30,41 @@
     padding: 20px;
     font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: rgb(49, 52, 61);
+    background-color: var(--dark);
  }
  
+ /* The title that includes my name on the left of the header */
  header h1{
     position: relative;
     width: 30%;
     left: -20px;
     text-align: right;
-    color: rgb(49, 52, 61);
-    background-color: cadetblue;
+    color: var(--dark);
+    background-color: var(--light);
     font-size: 50px;
     font-weight: bold;
     padding: 10px;
  }
  
+ /* Sets the width of the navigation/links area */
  header nav {
     width: 70%;
-    
  }
  
+ /* The parent flexbox to organise the layout of the links */
  header nav ul {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     flex-wrap: nowrap;
     height: 100%;
- 
  }
  
+ /* styles each link in the nav menu */
  .nav-menu {
     padding: 10px;
     text-align: center;
-    color: cadetblue;
+    color: var(--light);
     font-size: 30px;
     font-weight: bold;
     height: 100%;
@@ -63,8 +72,9 @@
     top: 50%;
  }
  
+ /* Styles the banner area */
  .block-background {
-    height: 300px;
+    height: 220px;
     width: 100%;
     margin-bottom: 25px;
     background-image: url("../Images/Background.jpg");
@@ -76,10 +86,11 @@
     align-items: flex-end;
  }
  
+ /* The title within the banner */
  .sub-title {
     padding: 10px 20px 10px 20px ;
-    color: rgb(49, 52, 61);
-    background-color: cadetblue;
+    color: var(--dark);
+    background-color: var(--light);
     width:fit-content;
     text-align: center;
     font-size: 30px;
@@ -87,6 +98,7 @@
     margin: 15px;
  }
 
+ /* Sets up flexbox for the body section to make the nav, content and footer different rows */
  .body-content {
     display: flex;
     flex-direction: row;
@@ -94,12 +106,14 @@
     padding-bottom: 15px;
  }
 
+ /* Sets the column width of the title for the content area */
  .body-left {
-    width: 30%;
-    border-right: 3px solid;
+    width: 20%;
+    border-right: 6px solid;
     border-color: rgb(26, 23, 112);
  }
 
+ /* Sets the text formats for the title */
  .body-left-content {
     font-size: 30px;
     font-weight: bold;
@@ -108,26 +122,32 @@
     text-align: right;
 
  }
+  
+ /* Sets the column width for the content in the content area */
  .body-right-content {
-    width: 75%;
-    padding: 10px;
+    width: 80%;
+    padding: 10px 50px 10px 50px;
     font-size: 20px;
     color: rgb(26, 23, 112);
 
  }
 
+  /* highlights nav link when mouse hovers over */
  .nav-menu:hover {
-    text-shadow: 4px 4px 14px cadetblue;
+    text-shadow: 4px 4px 14px var(--light);
     font-size: 30px;
     transition: 0.3s ease-in-out;
 
  }
+
+ /* reduces highlight from hover when nav link clicked */
  .nav-menu:active {
-    text-shadow: 2px 2px 10px cadetblue;
+    text-shadow: 2px 2px 10px var(--light);
     font-size: 30px;
 
  }
 
+ /* Sets up the flexbox for all the different work example pictures and links */
  .work-flexbox {
     display: flex;
     flex-direction: row;
@@ -135,6 +155,7 @@
     justify-content: space-between;  
  }
 
+ /* Sets the definition for a large picture of a work element */
  .work-flex-item-major{
     flex: 0 0 100%;
     padding: 0px 5px 5px 5px;
@@ -144,13 +165,20 @@
     margin-bottom: -50px;
  }
 
+  /* Creates a wrapper to hold the image and title box, these are separate items
+  so that we can add resolution to the items in which we want to control
+  in this case, the border is separate from the image because we want to greyscale the image 
+  to create a hover effect and if the border was styled against the image itself it would also 
+  grey the border too  */
  .work-flex-item-major .major-img-container {
-   border: cadetblue solid;
+   border: var(--light) solid;
     border-width: 9px;
     /* removes gap at bottom of image because of container div line height */
     line-height: 0;
  }
 
+  /* makes the image default greyscale and defines the transition when
+  mouse moves off the image */
  .work-flex-item-major .major-img-container img {
     width: 100%;
     height: auto;
@@ -162,6 +190,7 @@
     transition: all 0.3s ease-out;
  }
 
+  /* changes the image to full colour when mouse hovers over it */
  .work-flex-item-major div img:hover {
     filter: grayscale(0%);
     -webkit-transition: all 0.3s;
@@ -171,27 +200,32 @@
     transition: all 0.3s;
  }
 
+  /* Defines the title and skills box of the work element and positions it */
  .work-flex-item-major .major-headings {
     position: relative;
     bottom: 100px;
     left: 9px;
-    background-color: cadetblue;
-    border: cadetblue solid;
+    background-color: var(--light);
+    border: var(--light) solid;
     border-width: 10px;
     padding: 0px 10px 0px 10px;
     width: fit-content;
     line-height: 80%;
  }
 
+  /* Format of the Title of the work item */
  .work-flex-item-major .major-headings .image-header {
     font-size: 22px;
     font-weight: bold;
  }
 
+  /* Format of the skills of the work item */
  .work-flex-item-major .major-headings .image-skills {
     font-size: 13px;
  }
 
+  /* Sets the definition for a smaller picture of a work element
+  ---- All elements do the same as the major element, but only size difference */
  .work-flex-item-minor{
     flex: 0 0 50%;
     padding: 0px 5px 5px 5px;
@@ -202,7 +236,7 @@
  }
 
  .work-flex-item-minor .minor-img-container {
-   border: cadetblue solid;
+   border: var(--light) solid;
    border-width: 9px;
    /* removes gap at bottom of image because of container div line height */
    line-height: 0;
@@ -232,8 +266,8 @@
    position: relative;
    bottom: 100px;
    left: 9px;
-   background-color: cadetblue;
-   border: cadetblue solid;
+   background-color: var(--light);
+   border: var(--light) solid;
    border-width: 10px;
    padding: 0px 10px 0px 10px;
    width: fit-content;
@@ -249,54 +283,235 @@
     font-size: 11px;
  }
 
- @media screen and (max-width: 768px) {
-    header, header nav ul {
-        flex-direction: column;
+ /* Flexbox setup for contact links */
+ .contact-flexbox ul {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   flex-wrap: nowrap;
+
+}
+
+ /* Styling of each content link */
+.contact-flexbox ul li {
+   padding: 5px;
+   text-align: center;
+   color: var(--light);
+   font-size: 25px;
+   font-weight: bold;
+   height: 100%;
+   position: relative;
+   top: 50%;
+}
+
+ /* When the mouse hovers over the contact link it shows a line underneath the link*/
+.contact-flexbox ul li:hover {
+   box-sizing: border-box;
+   border-bottom: var(--light) solid;
+   border-width: 4px;
+}
+
+/* Removes the underline from the hyperlink in the contact links so that the hover can implement
+one for image hovering */
+.contact-list{
+   text-decoration: none;
+}
+
+/* defines the default style for the entire footer */
+.footer {
+   padding: 30px;
+   clear: both;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   text-align: center;
+   background-color: var(--dark);
+   color: white;
+}
+
+/* Defines the header h2 font size within the footer class */
+.footer h2 {
+   font-size: 20px;
+}
+
+ @media screen and (max-width: 992px) {
+   .block-background {
+       height: 180px;
+   }
+   .sub-title {
+       font-size: 20px;
+   }
+   header h1{
+       font-size: 40px;
+   }
+   .nav-menu {
+       font-size: 27px;
+   }
+
+   .nav-menu:hover {
+      font-size: 27px;  
+   }
+   .nav-menu:active {
+      text-shadow: 2px 2px 10px var(--light);
+      font-size: 27px;
+   }
+
+   header nav, header h1 {
+       width: 100%;
+   }
+
+   .body-left-content {
+      font-size: 22px;  
+   }
+
+   .body-right-content {
+      font-size: 16px;  
+   }
+
+   .work-flex-item-major, .work-flex-item-minor {
+      margin-bottom: -50px;
+   }
+
+   .work-flex-item-major .major-img-container, .work-flex-item-minor .minor-img-container {
+      border-width: 6px;
     }
-    .nav-menu {
-        display: inline-block; 
-        position: relative;
-        width: 100%;
-        text-align: center;
-        vertical-align: middle;
+
+  .work-flex-item-minor .minor-headings, .work-flex-item-major .major-headings {
+     bottom: 80px;
+     left: 6px;
+     padding: 0px 5px 0px 5px;
+  }
+
+  .contact-flexbox ul li {
+   font-size: 18px;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+   header, header nav ul {
+       flex-direction: column;
+   }
+   .nav-menu {
+       display: inline-block; 
+       position: relative;
+       width: 100%;
+       text-align: center;
+       vertical-align: middle;
+
+   }
+   .work-flexbox{
+       flex-direction: column;
+   }
+   .block-background {
+       height: 140px;
+   }
+   .sub-title {
+       font-size: 20px;
+   }
+   header h1{
+       font-size: 30px;
+   }
+   .nav-menu {
+       font-size: 20px;
+   }
+
+   header nav, header h1 {
+       width: 100%;
+   }
+
+   .body-left-content {
+      font-size: 18px;  
+   }
+
+   .body-right-content {
+      padding: 10px;
+   }
+
+   .work-flex-item-minor{
+      flex: 0 0 100%;
+   }
+
+   .work-flex-item-minor .minor-headings .image-header, .work-flex-item-major .major-headings .image-header {
+     font-size: 10px;
+     font-weight: bold;
+  }
  
-    }
-    .work-flexbox{
-        flex-direction: column;
-    }
-    .block-background {
-        height: 150px;
-    }
-    .sub-title {
-        font-size: 20px;
-    }
-    header h1{
-        font-size: 30px;
-    }
-    .nav-menu {
-        font-size: 20px;
-    }
+  .work-flex-item-minor .minor-headings .image-skills, .work-flex-item-major .major-headings .image-skills {
+     font-size: 07px;
+  }
+
+  .work-flex-item-minor .minor-headings, .work-flex-item-major .major-headings {
+     bottom: 80px;
+     padding: 0px 5px 0px 5px;
+     line-height: 50%;
+  }
+
+  .contact-flexbox ul li {
+   font-size: 14px;
+}
+
+}
+
+@media screen and (max-width: 410px) {
+   header, header nav ul {
+       flex-direction: column;
+   }
+   .nav-menu {
+       display: inline-block; 
+       position: relative;
+       width: 100%;
+       text-align: center;
+       vertical-align: middle;
+
+   }
+   .work-flexbox{
+       flex-direction: column;
+   }
+   .block-background {
+       height: 110px;
+   }
+   .sub-title {
+       font-size: 14px;
+   }
+   header h1{
+       font-size: 25px;
+   }
+   .nav-menu {
+       font-size: 18px;
+   }
+
+   header nav, header h1 {
+       width: 100%;
+   }
+
+   .body-left-content {
+      font-size: 12px;  
+   }
+
+   .body-right-content {
+      font-size: 10px;  
+   }
+
+   .work-flex-item-minor{
+      flex: 0 0 100%;
+   }
+
+   .work-flex-item-minor .minor-headings .image-header, .work-flex-item-major .major-headings .image-header {
+     font-size: 8px;
+     font-weight: bold;
+  }
  
-    header nav, header h1 {
-        width: 100%;
-    }
+  .work-flex-item-minor .minor-headings .image-skills, .work-flex-item-major .major-headings .image-skills {
+     font-size: 06px;
+  }
 
-    .work-flex-item-minor{
-       flex: 0 0 100%;
-    }
+  .work-flex-item-minor .minor-headings, .work-flex-item-major .major-headings {
+     bottom: 80px;
+     padding: 0px 5px 0px 5px;
+     line-height: 50%;
+  }
 
-    .work-flex-item-minor .minor-headings .image-header, .work-flex-item-major .major-headings .image-header {
-      font-size: 10px;
-      font-weight: bold;
-   }
-  
-   .work-flex-item-minor .minor-headings .image-skills, .work-flex-item-major .major-headings .image-skills {
-      font-size: 07px;
-   }
+  .contact-flexbox ul li {
+   font-size: 12px;
+}
 
-   .work-flex-item-minor .minor-headings, .work-flex-item-major .major-headings {
-      bottom: 80px;
-      padding: 0px 5px 0px 5px;
-      line-height: 50%;
-   }
- }
+}
