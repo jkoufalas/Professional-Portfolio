@@ -127,8 +127,9 @@
  .body-right-content {
     width: 80%;
     padding: 10px 50px 10px 50px;
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(26, 23, 112);
+    line-height: 1.5;
 
  }
 
@@ -363,7 +364,9 @@ one for image hovering */
    }
 
    .body-right-content {
-      font-size: 16px;  
+      font-size: 16px; 
+      padding: 10px 30px 10px 30px;
+ 
    }
 
    .work-flex-item-major, .work-flex-item-minor {
@@ -423,11 +426,18 @@ one for image hovering */
    }
 
    .body-right-content {
-      padding: 10px;
+      font-size: 12px;
+      padding: 10px 20px 10px 20px;
+
    }
 
    .work-flex-item-minor{
       flex: 0 0 100%;
+      margin-bottom: -40px;
+   }
+
+   .work-flex-item-major{
+      margin-bottom: -40px;
    }
 
    .work-flex-item-minor .minor-headings .image-header, .work-flex-item-major .major-headings .image-header {
@@ -488,11 +498,18 @@ one for image hovering */
    }
 
    .body-right-content {
-      font-size: 10px;  
+      font-size: 10px; 
+      padding: 10px 20px 10px 20px;
+ 
    }
 
    .work-flex-item-minor{
       flex: 0 0 100%;
+      margin-bottom: -30px;
+   }
+
+   .work-flex-item-major{
+      margin-bottom: -30px;
    }
 
    .work-flex-item-minor .minor-headings .image-header, .work-flex-item-major .major-headings .image-header {
