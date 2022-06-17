@@ -6,15 +6,17 @@ This is a web site dedicated to presenting a portfolio of work to highlight diff
 
 There are 3 main areas in this portfolio.
 - About Me
--- Which outlines a small introduction about me.
+ Which outlines a small introduction about me.
 - Work
--- This is collection of work that i have done. The images are links that will redirect you to the work where you can evaluate them.
+ This is collection of work that i have done. The images are links that will redirect you to the work where you can evaluate them.
 The description under the header for each link describes the skills used in that work item.
 - Contact
--- Various mediums in which you can contact me
----
+ Various mediums in which you can contact me
+<br>
+
+### Lessons Learnt
 This site has used some advanced concepts regarding CSS, it has taught me a lot about placement and the small detail required to style items and provide functionality to the page.
----
+
 ## Table of Contents
 
 - [Deployed Link](#Link)
