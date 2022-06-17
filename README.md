@@ -30,4 +30,4 @@ The link to the deployed website of the assignment is <br>
 
 This image provides a sample of the completed website.
 
-![The Horiseon webpage includes a navigation bar, a header image, and cards with text and images at the bottom of the page.](./assets/screenshot/Horiseon-Screenshot.png)
+![This professional portfolio holds link to all my work that demonstrates my skills.](./assets/Images/jkoufalas.github.io.jpg)
