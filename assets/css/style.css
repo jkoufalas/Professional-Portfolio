@@ -98,6 +98,13 @@
     margin: 15px;
  }
 
+ .image_portrait {
+   float: left;
+   margin: 20px 50px 10px 10px;
+   width: 200px;
+
+ }
+
  /* Sets up flexbox for the body section to make the nav, content and footer different rows */
  .body-content {
     display: flex;
@@ -410,6 +417,9 @@ one for image hovering */
    .sub-title {
        font-size: 20px;
    }
+   .image_portrait {
+      width: 120px;
+    }
    header h1{
        font-size: 30px;
    }
@@ -482,6 +492,9 @@ one for image hovering */
    .sub-title {
        font-size: 14px;
    }
+   .image_portrait {
+      width: 100px;
+    }
    header h1{
        font-size: 25px;
    }
