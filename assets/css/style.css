@@ -218,7 +218,7 @@
     border-width: 10px;
     padding: 0px 10px 0px 10px;
     width: fit-content;
-    line-height: 80%;
+    line-height: 100%;
  }
 
   /* Format of the Title of the work item */
@@ -279,7 +279,7 @@
    border-width: 10px;
    padding: 0px 10px 0px 10px;
    width: fit-content;
-   line-height: 80%;
+   line-height: 100%;
 }
 
  .work-flex-item-minor .minor-headings .image-header {
