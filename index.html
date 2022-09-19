@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Selectors with CSS</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Advanced Selectors with CSS</title>
-  <link rel="stylesheet" href="./assets/css/reset.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-
-<body>
-  <header>
-    <h1>John Koufalas</h1>
-    <!-- This div is used to style the links section -->
-    <nav>
-      <ul>
-        <li>
-          <a class="nav-menu" href="#about-me">About Me</a>
-        </li>
-        <li>
-          <a class="nav-menu" href="#work">Work</a>
-        </li>
-        <li>
-          <a class="nav-menu" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
-</header>
-<!-- This sections implements the banner -->
-<section class="block-background">
-  <div class="sub-title">
-    Professional Portfolio
-  </div> 
-</section>
-<!-- This implements the main content area 
-which includes the about me, work and contact information -->
-  <main>
-    <section class="body-content">
-      <!-- The wrapper for the flexbox to create columns for the about me content -->
-      <aside class="body-left" id="about-me"> 
-        <!-- Left column about me -->
-        <h1 class="body-left-content">About Me</h1>
-      </aside>
-        <!-- Right column text -->
-       <div class="body-right-content" id="about-me-content"> 
-        <img src="./assets/Images/Portrait.png" class="image_portrait">
-          <p>
-            My name is John Koufalas and I am 39 years old. My wife's name is Christina and we have 4 daughters aged 8, 7 and the twins are 2.
-            I enjoy outdoor cooking, this includes, BBQ's, smoking, rotisseries and my wood oven.
-          </p>
-          <br> 
-          <p>
-            I studied at Adelaide University where I recieved a Bachelors Degree in Software Engineering graduating in 2002 and a Bachelors Degree in Information Technology and Telecommunications with Honors in 2006.
-            I started at BAE Systems straight out of university and worked there for 5 years before moving to the Defence Department where I worked for 9 years.
-          </p>
-          <br>
-          <p>
-            I want to take my current skills and add to them in the area of full stack development. I find this area interesting and enjoyable.
-          </p>
-       </div>
-
+  <body>
+    <header>
+      <h1>John Koufalas</h1>
+      <!-- This div is used to style the links section -->
+      <nav>
+        <ul>
+          <li>
+            <a class="nav-menu" href="#about-me">About Me</a>
+          </li>
+          <li>
+            <a class="nav-menu" href="#work">Work</a>
+          </li>
+          <li>
+            <a class="nav-menu" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- This sections implements the banner -->
+    <section class="block-background">
+      <div class="sub-title">Professional Portfolio</div>
     </section>
-    <section class="body-content">
-      <!-- The wrapper for the flexbox to create columns for the work content -->
-      <aside class="body-left" id="work"> 
-        <!-- Left column work -->
-        <h1 class="body-left-content">Work</h1>
-      </aside>
-       <div class="body-right-content">
-         <!-- Right column work content/links -->
+    <!-- This implements the main content area 
+which includes the about me, work and contact information -->
+    <main>
+      <section class="body-content">
+        <!-- The wrapper for the flexbox to create columns for the about me content -->
+        <aside class="body-left" id="about-me">
+          <!-- Left column about me -->
+          <h1 class="body-left-content">About Me</h1>
+        </aside>
+        <!-- Right column text -->
+        <div class="body-right-content" id="about-me-content">
+          <img src="./assets/Images/Portrait.png" class="image_portrait" />
+          <p>
+            My name is John Koufalas and I am 39 years old. My wife's name is
+            Christina and we have 4 daughters aged 8, 7 and the twins are 2. I
+            enjoy outdoor cooking, this includes, BBQ's, smoking, rotisseries
+            and my wood oven.
+          </p>
+          <br />
+          <p>
+            I studied at Adelaide University where I recieved a Bachelors Degree
+            in Software Engineering graduating in 2002 and a Bachelors Degree in
+            Information Technology and Telecommunications with Honors in 2006. I
+            started at BAE Systems straight out of university and worked there
+            for 5 years before moving to the Defence Department where I worked
+            for 9 years.
+          </p>
+          <br />
+          <p>
+            I want to take my current skills and add to them in the area of full
+            stack development. I find this area interesting and enjoyable.
+          </p>
+        </div>
+      </section>
+      <section class="body-content">
+        <!-- The wrapper for the flexbox to create columns for the work content -->
+        <aside class="body-left" id="work">
+          <!-- Left column work -->
+          <h1 class="body-left-content">Work</h1>
+        </aside>
+        <div class="body-right-content">
+          <!-- Right column work content/links -->
           <div class="work-flexbox">
             <!-- The parent container to initialise flexbox -->
             <figure class="work-flex-item-major">
@@ -77,15 +80,39 @@ which includes the about me, work and contact information -->
               This is for a larger version of the item -->
               <div class="major-img-container">
                 <!-- wrapper for the image and its styling -->
+                <a href="https://github.com/jkoufalas/codeIt">
+                  <img src="./assets/Images/codeIt.png" />
+                </a>
+              </div>
+              <div class="major-headings">
+                <!-- Wrapper to place the title and skills for styling and placing -->
+                <span class="image-header">codeIt</span>
+                <br />
+                <span class="image-skills"
+                  >NodeJS / ExpressJS / Sequelizer (ORM) / HandlebarsJS</span
+                >
+                <span class="image-skills"
+                  >MySQL / Nodemailer / Tailwind (CSS) / BCrypt</span
+                >
+              </div>
+            </figure>
+            <figure class="work-flex-item-major">
+              <!-- The parent container item, used to wrap all the items inside such
+               as the picture, heading, description and borders
+              This is for a larger version of the item -->
+              <div class="major-img-container">
+                <!-- wrapper for the image and its styling -->
                 <a href="https://jkoufalas.github.io/WhatsOn/index.html">
-                  <img src="./assets/Images/WhatsOn.png">
+                  <img src="./assets/Images/WhatsOn.png" />
                 </a>
               </div>
               <div class="major-headings">
                 <!-- Wrapper to place the title and skills for styling and placing -->
                 <span class="image-header">WhatsOn</span>
-                <br>
-                <span class="image-skills">CSS(Bulmar) / Javascript / JQuery / Web APIs</span>
+                <br />
+                <span class="image-skills"
+                  >CSS(Bulmar) / Javascript / JQuery / Web APIs</span
+                >
               </div>
             </figure>
             <figure class="work-flex-item-minor">
@@ -95,68 +122,69 @@ which includes the about me, work and contact information -->
               <div class="minor-img-container">
                 <!-- wrapper for the image and its styling -->
                 <a href="https://jkoufalas.github.io/CSS-GIT-Basics/index.html">
-                  <img src="./assets/Images/CSSGit.jpg">
-                </a>  
+                  <img src="./assets/Images/CSSGit.jpg" />
+                </a>
               </div>
               <div class="minor-headings">
                 <!-- Wrapper to place the title and skills for styling and placing -->
                 <span class="image-header">Horieson</span>
-                <br>
+                <br />
                 <span class="image-skills">CSS / Git</span>
               </div>
             </figure>
             <figure class="work-flex-item-minor">
               <!-- Same as above -->
               <div class="minor-img-container">
-                <img src="./assets/Images/Placeholder 2.jpg">
+                <img src="./assets/Images/Placeholder 2.jpg" />
               </div>
               <div class="minor-headings">
                 <span class="image-header">Placeholder Item 2</span>
-                <br>
+                <br />
                 <span class="image-skills">Placeholder Skills 2</span>
               </div>
             </figure>
-
           </div>
-
-       </div>
-
-    </section>
-    <section class="body-content">
-      <!-- The wrapper for the flexbox to create columns for the contact content -->
-      <aside class="body-left" id="contact"> 
-        <!-- Left column -->
-        <h1 class="body-left-content">Contact</h1>
-      </aside>
-       <div class="body-right-content">
-         <!-- Right column -->
-        <div class="contact-flexbox">
-          <!-- Wrapper for contact content -->
+        </div>
+      </section>
+      <section class="body-content">
+        <!-- The wrapper for the flexbox to create columns for the contact content -->
+        <aside class="body-left" id="contact">
+          <!-- Left column -->
+          <h1 class="body-left-content">Contact</h1>
+        </aside>
+        <div class="body-right-content">
+          <!-- Right column -->
+          <div class="contact-flexbox">
+            <!-- Wrapper for contact content -->
             <ul>
               <!-- Parent item to create flexbox of contact lists -->
               <li>
-                <a class="contact-list" href="https://github.com/jkoufalas">GitHub</a>
+                <a class="contact-list" href="https://github.com/jkoufalas"
+                  >GitHub</a
+                >
               </li>
               <li>
-                <a class="contact-list" href="https://www.linkedin.com/in/john-koufalas-0a6a40239/">LinkedIn</a>
+                <a
+                  class="contact-list"
+                  href="https://www.linkedin.com/in/john-koufalas-0a6a40239/"
+                  >LinkedIn</a
+                >
               </li>
               <li>
-                <a class="contact-list" href="mailto:john@koufalas.com">john@koufalas.com</a>
+                <a class="contact-list" href="mailto:john@koufalas.com"
+                  >john@koufalas.com</a
+                >
               </li>
             </ul>
+          </div>
         </div>
-       </div>
+      </section>
+    </main>
 
-    </section>
-  </main>
-
-  <footer class="footer">
-    <!-- The footer at the bottom of the page -->
-    <h2>Made by John Koufalas</h2>
-    <p>
-        Thanks for Visiting 😃
-    </p>
-</footer>
-</body>
-
+    <footer class="footer">
+      <!-- The footer at the bottom of the page -->
+      <h2>Made by John Koufalas</h2>
+      <p>Thanks for Visiting 😃</p>
+    </footer>
+  </body>
 </html>
